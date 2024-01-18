@@ -1,0 +1,17 @@
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\darkroom.exe
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\darkroom.deps.json
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\darkroom.runtimeconfig.json
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\darkroom.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\darkroom.pdb
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.frmDarkroom.resources
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.csproj.GenerateResource.cache
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.AssemblyInfoInputs.cache
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.AssemblyInfo.cs
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.csproj.CoreCompileInputs.cache
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\refint\darkroom.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.pdb
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.genruntimeconfig.cache
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\ref\darkroom.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\obj\Debug\net6.0-windows\darkroom.sourcelink.json
