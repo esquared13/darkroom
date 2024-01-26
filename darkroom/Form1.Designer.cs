@@ -33,11 +33,15 @@
             cmbExportType = new ComboBox();
             ofdOriginalPhotos = new OpenFileDialog();
             lvSelectedPhotos = new ListView();
+            lblSelectedFiles = new Label();
+            btnClear = new Button();
+            btnExit = new Button();
+            lblConvertTo = new Label();
             SuspendLayout();
             // 
             // btnSelectPhotos
             // 
-            btnSelectPhotos.Location = new Point(12, 12);
+            btnSelectPhotos.Location = new Point(12, 273);
             btnSelectPhotos.Name = "btnSelectPhotos";
             btnSelectPhotos.Size = new Size(120, 25);
             btnSelectPhotos.TabIndex = 1;
@@ -47,7 +51,7 @@
             // 
             // btnConvert
             // 
-            btnConvert.Location = new Point(264, 12);
+            btnConvert.Location = new Point(167, 333);
             btnConvert.Name = "btnConvert";
             btnConvert.Size = new Size(120, 25);
             btnConvert.TabIndex = 3;
@@ -58,7 +62,7 @@
             // cmbExportType
             // 
             cmbExportType.FormattingEnabled = true;
-            cmbExportType.Location = new Point(138, 12);
+            cmbExportType.Location = new Point(167, 304);
             cmbExportType.Name = "cmbExportType";
             cmbExportType.Size = new Size(120, 23);
             cmbExportType.TabIndex = 2;
@@ -66,18 +70,58 @@
             // 
             // ofdOriginalPhotos
             // 
-            ofdOriginalPhotos.FileName = "openFileDialog1";
             ofdOriginalPhotos.Multiselect = true;
             ofdOriginalPhotos.Title = "\"Browse Photos\"";
             // 
             // lvSelectedPhotos
             // 
-            lvSelectedPhotos.Location = new Point(11, 43);
+            lvSelectedPhotos.Alignment = ListViewAlignment.Left;
+            lvSelectedPhotos.Location = new Point(12, 27);
             lvSelectedPhotos.Name = "lvSelectedPhotos";
-            lvSelectedPhotos.Size = new Size(121, 97);
+            lvSelectedPhotos.Size = new Size(275, 240);
             lvSelectedPhotos.TabIndex = 4;
             lvSelectedPhotos.UseCompatibleStateImageBehavior = false;
-            lvSelectedPhotos.UseWaitCursor = true;
+            lvSelectedPhotos.View = View.List;
+            // 
+            // lblSelectedFiles
+            // 
+            lblSelectedFiles.AutoSize = true;
+            lblSelectedFiles.ForeColor = Color.Black;
+            lblSelectedFiles.Location = new Point(12, 9);
+            lblSelectedFiles.Name = "lblSelectedFiles";
+            lblSelectedFiles.Size = new Size(77, 15);
+            lblSelectedFiles.TabIndex = 5;
+            lblSelectedFiles.Text = "Selected Files";
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(167, 275);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(120, 23);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "&Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(167, 415);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(120, 23);
+            btnExit.TabIndex = 7;
+            btnExit.Text = "E&xit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
+            // lblConvertTo
+            // 
+            lblConvertTo.AutoSize = true;
+            lblConvertTo.Location = new Point(95, 312);
+            lblConvertTo.Name = "lblConvertTo";
+            lblConvertTo.Size = new Size(66, 15);
+            lblConvertTo.TabIndex = 8;
+            lblConvertTo.Text = "Convert to:";
+            lblConvertTo.Click += lblConvertTo_Click;
             // 
             // frmDarkroom
             // 
@@ -85,7 +129,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(800, 450);
+            CancelButton = btnExit;
+            ClientSize = new Size(302, 450);
+            Controls.Add(lblConvertTo);
+            Controls.Add(btnExit);
+            Controls.Add(btnClear);
+            Controls.Add(lblSelectedFiles);
             Controls.Add(lvSelectedPhotos);
             Controls.Add(cmbExportType);
             Controls.Add(btnConvert);
@@ -93,6 +142,7 @@
             Name = "frmDarkroom";
             Text = "darkroom";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -102,5 +152,9 @@
         private ComboBox cmbExportType;
         private OpenFileDialog ofdOriginalPhotos;
         private ListView lvSelectedPhotos;
+        private Label lblSelectedFiles;
+        private Button btnClear;
+        private Button btnExit;
+        private Label lblConvertTo;
     }
 }
