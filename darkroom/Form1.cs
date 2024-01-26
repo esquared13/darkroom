@@ -1,10 +1,14 @@
-using ImageMagick; // used dotnet add package Magick.NET-Q16-AnyCPU --version 13.5.0
+using ImageMagick;
+using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
+using System.Windows.Forms.Design; // used dotnet add package Magick.NET-Q16-AnyCPU --version 13.5.0
 
 namespace darkroom
 {
     public partial class frmDarkroom : Form
     {
         private string[] selectedFiles; // used to store filenames for converter
+        string outputFilePath; // used to store the location of converted files, iterated through later
         // string outputFilePath = @"C:\.jpg"; // test output
         public frmDarkroom()
         {
@@ -45,10 +49,18 @@ namespace darkroom
                 {
                     MagickImage image = new MagickImage(file);
                     image.Format = MagickFormat.Jpg;
-                    // maybe add functionality to trim old file extension??
-                    string outputFilePath = file + ".darkroom.jpg"; // distinguishes converted photos so that the originals are not overwritten, saves as .jpg
+                    outputFilePath = Path.Combine(Path.GetDirectoryName(file), Path.GetFileNameWithoutExtension(file) + ".darkroom.jpg"); // names converted photos
                     image.Write(outputFilePath);
                 }
+
+                MessageBox.Show("Files converted successfully");
+               
+                ProcessStartInfo psiConvertedFiles = new ProcessStartInfo
+                {
+                    Arguments = "/select, \"" + outputFilePath + "\"",
+                    FileName = "explorer.exe"
+                };
+                Process.Start(psiConvertedFiles);
             }
         }
 

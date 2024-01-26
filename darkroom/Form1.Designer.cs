@@ -95,9 +95,9 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(167, 275);
+            btnClear.Location = new Point(167, 273);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(120, 23);
+            btnClear.Size = new Size(120, 25);
             btnClear.TabIndex = 6;
             btnClear.Text = "&Clear";
             btnClear.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             // 
             btnExit.Location = new Point(167, 415);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(120, 23);
+            btnExit.Size = new Size(120, 25);
             btnExit.TabIndex = 7;
             btnExit.Text = "E&xit";
             btnExit.UseVisualStyleBackColor = true;
