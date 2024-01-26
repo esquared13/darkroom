@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "7TIMInnrsnzgXZPbI/52AJm+qf4L38Ds2rRSEMafb1WSlkhkdguOs2NQ0y8c2P1fDnE3y/DLuqQE4hrmCmToCQ==",
+  "dgSpecHash": "HSFaa58o8gMxgoIRJU9Pme/gBRQTWM65sIwOXQyxeaC2vIxHx9vJ8K8BqHbFulZJMUy2phwBnh/JvZemkZZ30g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\12esq\\OneDrive\\Documents\\coding projects\\c#\\darkroom\\esquared13\\darkroom\\darkroom\\darkroom.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\eenzinge\\OneDrive - Indiana University\\Documents\\darkroom\\darkroom\\darkroom.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\iupctec3\\.nuget\\packages\\magick.net-q16-anycpu\\13.5.0\\magick.net-q16-anycpu.13.5.0.nupkg.sha512",
+    "C:\\Users\\iupctec3\\.nuget\\packages\\magick.net.core\\13.5.0\\magick.net.core.13.5.0.nupkg.sha512",
+    "C:\\Users\\iupctec3\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\iupctec3\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\iupctec3\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\iupctec3\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
+  ],
   "logs": []
 }
