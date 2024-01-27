@@ -30,13 +30,13 @@
         {
             btnSelectPhotos = new Button();
             btnConvert = new Button();
-            cmbExportType = new ComboBox();
             ofdOriginalPhotos = new OpenFileDialog();
             lvSelectedPhotos = new ListView();
             lblSelectedFiles = new Label();
             btnClear = new Button();
             btnExit = new Button();
             lblConvertTo = new Label();
+            cmbExtension = new ComboBox();
             SuspendLayout();
             // 
             // btnSelectPhotos
@@ -58,15 +58,6 @@
             btnConvert.Text = "&Develop!";
             btnConvert.UseVisualStyleBackColor = true;
             btnConvert.Click += btnConvert_Click;
-            // 
-            // cmbExportType
-            // 
-            cmbExportType.FormattingEnabled = true;
-            cmbExportType.Location = new Point(167, 304);
-            cmbExportType.Name = "cmbExportType";
-            cmbExportType.Size = new Size(120, 23);
-            cmbExportType.TabIndex = 2;
-            cmbExportType.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // ofdOriginalPhotos
             // 
@@ -116,12 +107,24 @@
             // lblConvertTo
             // 
             lblConvertTo.AutoSize = true;
-            lblConvertTo.Location = new Point(95, 312);
+            lblConvertTo.Location = new Point(95, 307);
             lblConvertTo.Name = "lblConvertTo";
             lblConvertTo.Size = new Size(66, 15);
             lblConvertTo.TabIndex = 8;
             lblConvertTo.Text = "Convert to:";
             lblConvertTo.Click += lblConvertTo_Click;
+            // 
+            // cmbExtension
+            // 
+            cmbExtension.AutoCompleteMode = AutoCompleteMode.Append;
+            cmbExtension.ForeColor = SystemColors.GrayText;
+            cmbExtension.FormattingEnabled = true;
+            cmbExtension.Items.AddRange(new object[] { "JPG", "PNG" });
+            cmbExtension.Location = new Point(167, 304);
+            cmbExtension.Name = "cmbExtension";
+            cmbExtension.Size = new Size(120, 23);
+            cmbExtension.TabIndex = 9;
+            cmbExtension.Text = "File Format";
             // 
             // frmDarkroom
             // 
@@ -131,12 +134,12 @@
             BackgroundImageLayout = ImageLayout.None;
             CancelButton = btnExit;
             ClientSize = new Size(302, 450);
+            Controls.Add(cmbExtension);
             Controls.Add(lblConvertTo);
             Controls.Add(btnExit);
             Controls.Add(btnClear);
             Controls.Add(lblSelectedFiles);
             Controls.Add(lvSelectedPhotos);
-            Controls.Add(cmbExportType);
             Controls.Add(btnConvert);
             Controls.Add(btnSelectPhotos);
             Name = "frmDarkroom";
@@ -149,12 +152,12 @@
 
         private Button btnSelectPhotos;
         private Button btnConvert;
-        private ComboBox cmbExportType;
         private OpenFileDialog ofdOriginalPhotos;
         private ListView lvSelectedPhotos;
         private Label lblSelectedFiles;
         private Button btnClear;
         private Button btnExit;
         private Label lblConvertTo;
+        private ComboBox cmbExtension;
     }
 }

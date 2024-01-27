@@ -126,23 +126,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iupctec3\\.nuget\\packages\\": {},
+    "C:\\Users\\12esq\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eenzinge\\OneDrive - Indiana University\\Documents\\darkroom\\darkroom\\darkroom.csproj",
+      "projectUniqueName": "C:\\users\\12esq\\OneDrive\\documents\\coding projects\\c#\\darkroom\\esquared13\\darkroom\\darkroom\\darkroom.csproj",
       "projectName": "darkroom",
-      "projectPath": "C:\\Users\\eenzinge\\OneDrive - Indiana University\\Documents\\darkroom\\darkroom\\darkroom.csproj",
-      "packagesPath": "C:\\Users\\iupctec3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eenzinge\\OneDrive - Indiana University\\Documents\\darkroom\\darkroom\\obj\\",
+      "projectPath": "C:\\users\\12esq\\OneDrive\\documents\\coding projects\\c#\\darkroom\\esquared13\\darkroom\\darkroom\\darkroom.csproj",
+      "packagesPath": "C:\\Users\\12esq\\.nuget\\packages\\",
+      "outputPath": "C:\\users\\12esq\\OneDrive\\documents\\coding projects\\c#\\darkroom\\esquared13\\darkroom\\darkroom\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\iupctec3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\12esq\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -151,6 +151,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -185,24 +186,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

@@ -10,6 +10,7 @@ namespace darkroom
         private string[] selectedFiles; // used to store filenames for converter
         string outputFilePath; // used to store the location of converted files, iterated through later
         // string outputFilePath = @"C:\.jpg"; // test output
+
         public frmDarkroom()
         {
             InitializeComponent();
@@ -43,25 +44,52 @@ namespace darkroom
         {
             // converts files stored from adding files to the selected file type
             // copy to clipboard and message box that says it was copied to clipboard
+            // add switch statements for each file ext. in combo box
+            
+            // validate that combo box is not null
             if (selectedFiles != null)
             {
-                foreach (string file in selectedFiles)
+                if (cmbExtension.Text == "JPG")
                 {
-                    MagickImage image = new MagickImage(file);
-                    image.Format = MagickFormat.Jpg;
-                    outputFilePath = Path.Combine(Path.GetDirectoryName(file), Path.GetFileNameWithoutExtension(file) + ".darkroom.jpg"); // names converted photos
-                    image.Write(outputFilePath);
+                    foreach (string file in selectedFiles)
+                    {
+                        convertToJPG(file);
+                    }
                 }
+                else if (cmbExtension.Text == "PNG")
+                {
+                    foreach (string file in selectedFiles)
+                    {
+                        convertToPNG(file);
+                    }
+                }
+                // default case is jpg
 
-                MessageBox.Show("Files converted successfully");
+                MessageBox.Show("Files converted successfully.");
                
-                ProcessStartInfo psiConvertedFiles = new ProcessStartInfo
+                ProcessStartInfo psiConvertedFiles = new ProcessStartInfo // process that can open outputFilePath in file explorer
                 {
                     Arguments = "/select, \"" + outputFilePath + "\"",
                     FileName = "explorer.exe"
                 };
-                Process.Start(psiConvertedFiles);
+                Process.Start(psiConvertedFiles); // starts process that opens file explorer to the location where the photos were saved
             }
+        }
+
+        private void convertToJPG(string file) // convert to jpg
+        {
+            MagickImage image = new MagickImage(file);
+            image.Format = MagickFormat.Jpg;
+            outputFilePath = Path.Combine(Path.GetDirectoryName(file), Path.GetFileNameWithoutExtension(file) + ".darkroom.jpg"); // names converted photos
+            image.Write(outputFilePath);
+        }
+
+        private void convertToPNG(string file) // convert to png
+        {
+            MagickImage image = new MagickImage(file);
+            image.Format = MagickFormat.Png;
+            outputFilePath = Path.Combine(Path.GetDirectoryName(file), Path.GetFileNameWithoutExtension(file) + ".darkroom.png");
+            image.Write(outputFilePath);
         }
 
         private void btnExit_Click(object sender, EventArgs e) // escape key was also set to do this in properties
