@@ -1,4 +1,4 @@
-!!! darkroom !!!
+**darkroom**
 
 The goal of this project is to create a utility that can convert .heic files into .jpg files.  It quickly became more than that (as these things do) and is a more robust conversion tool that can handle the following file formats (for the most part):
 - BMP: Windows Bitmap
