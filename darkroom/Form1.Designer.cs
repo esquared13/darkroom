@@ -62,7 +62,7 @@
             // ofdOriginalPhotos
             // 
             ofdOriginalPhotos.Multiselect = true;
-            ofdOriginalPhotos.Title = "\"Browse Photos\"";
+            ofdOriginalPhotos.Title = "Browse Photos";
             // 
             // lvSelectedPhotos
             // 
@@ -119,7 +119,7 @@
             cmbExtension.AutoCompleteMode = AutoCompleteMode.Append;
             cmbExtension.ForeColor = SystemColors.GrayText;
             cmbExtension.FormattingEnabled = true;
-            cmbExtension.Items.AddRange(new object[] { "JPG", "PNG" });
+            cmbExtension.Items.AddRange(new object[] { ".bmp", ".gif", ".jpeg", ".png", ".tiff", ".webp", ".ico", ".pdf", ".psd", ".svg", ".heic", ".pict", ".pcd", ".pfm", ".pbm", ".pgm", ".ppm", ".pam", ".exr", ".hdr", ".tga", ".xbm", ".xpm" });
             cmbExtension.Location = new Point(167, 304);
             cmbExtension.Name = "cmbExtension";
             cmbExtension.Size = new Size(120, 23);
