@@ -82,7 +82,7 @@ namespace darkroom // :3
                     {
                         message += file + "\n";
                     }
-                    MessageBox.Show(message, "Unable to open files");
+                    MessageBox.Show(message, "Unable to open files.");
                     rejectedFiles.Clear(); // empties rejectedFiles in case the user adds more files again
                 }
 
@@ -98,7 +98,7 @@ namespace darkroom // :3
                 outputFormatEdited = FirstCharToUpper(input); // makes first letter uppercase
                 if (!fileExtensions.Contains(outputFormat))  // message box if user types in a format that is UNACCEPTABLE🔥🔥🔥
                 {
-                    MessageBox.Show("darkroom does not support the selected output format.", "Invalid output format selected");
+                    MessageBox.Show("Invalid output format selected.");
                 }
                 else
                 {
@@ -138,7 +138,7 @@ namespace darkroom // :3
             }
             else
             {
-                MessageBox.Show("No files were selected.", "No files to convert");
+                MessageBox.Show("No files were selected.");
             }
         }
 
@@ -226,10 +226,17 @@ namespace darkroom // :3
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Array.Clear(selectedFiles); // clears selectedFiles array
-            checkedFiles.Clear(); // clears checkedFiles list
-            // do not need to clear rejectedFiles because it already clears itself in earlier event handler!!!!
-            lvSelectedPhotos.Items.Clear(); // clears items in ListView
+            try
+            {
+                Array.Clear(selectedFiles); // clears selectedFiles array
+                checkedFiles.Clear(); // clears checkedFiles list
+                                      // do not need to clear rejectedFiles because it already clears itself in earlier event handler!!!!
+                lvSelectedPhotos.Items.Clear(); // clears items in ListView
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nothing to clear!");
+            }
         }
     }
 }

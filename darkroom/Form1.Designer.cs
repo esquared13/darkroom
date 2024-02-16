@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDarkroom));
             btnSelectPhotos = new Button();
             btnConvert = new Button();
             ofdOriginalPhotos = new OpenFileDialog();
@@ -51,9 +52,9 @@
             // 
             // btnConvert
             // 
-            btnConvert.Location = new Point(167, 333);
+            btnConvert.Location = new Point(12, 333);
             btnConvert.Name = "btnConvert";
-            btnConvert.Size = new Size(120, 25);
+            btnConvert.Size = new Size(275, 25);
             btnConvert.TabIndex = 3;
             btnConvert.Text = "&Develop!";
             btnConvert.UseVisualStyleBackColor = true;
@@ -96,7 +97,8 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(167, 415);
+            btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnExit.Location = new Point(167, 364);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(120, 25);
             btnExit.TabIndex = 7;
@@ -131,9 +133,10 @@
             AcceptButton = btnConvert;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.None;
             CancelButton = btnExit;
-            ClientSize = new Size(302, 450);
+            ClientSize = new Size(302, 412);
             Controls.Add(cmbExtension);
             Controls.Add(lblConvertTo);
             Controls.Add(btnExit);
@@ -142,6 +145,7 @@
             Controls.Add(lvSelectedPhotos);
             Controls.Add(btnConvert);
             Controls.Add(btnSelectPhotos);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDarkroom";
             Text = "darkroom";
             ResumeLayout(false);
