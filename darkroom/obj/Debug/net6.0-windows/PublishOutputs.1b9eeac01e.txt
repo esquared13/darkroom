@@ -1,0 +1,15 @@
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\darkroom.exe
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\darkroom.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\darkroom.deps.json
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\darkroom.runtimeconfig.json
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\darkroom.pdb
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\Magick.NET-Q16-AnyCPU.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\Magick.NET.Core.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\linux-arm64\native\Magick.Native-Q16-arm64.dll.so
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\linux-musl-x64\native\Magick.Native-Q16-x64.dll.so
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\linux-x64\native\Magick.Native-Q16-x64.dll.so
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\osx-arm64\native\Magick.Native-Q16-arm64.dll.dylib
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\osx-x64\native\Magick.Native-Q16-x64.dll.dylib
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\win-arm64\native\Magick.Native-Q16-arm64.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\win-x64\native\Magick.Native-Q16-x64.dll
+C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Debug\net6.0-windows\publish\runtimes\win-x86\native\Magick.Native-Q16-x86.dll

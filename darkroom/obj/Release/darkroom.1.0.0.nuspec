@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>darkroom</id>
+    <version>1.0.0</version>
+    <authors>darkroom</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="0d783eec65896b3740fb69d95e25091910a2d843" />
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="Magick.NET-Q16-AnyCPU" version="13.5.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Release\net6.0-windows\darkroom.runtimeconfig.json" target="lib\net6.0-windows7.0\darkroom.runtimeconfig.json" />
+    <file src="C:\Users\12esq\OneDrive\Documents\coding projects\c#\darkroom\esquared13\darkroom\darkroom\bin\Release\net6.0-windows\darkroom.dll" target="lib\net6.0-windows7.0\darkroom.dll" />
+  </files>
+</package>
