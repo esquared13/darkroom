@@ -41,6 +41,8 @@ namespace darkroom // :3
             ".xbm",
             ".xpm"};
         string outputFormat; // used to store the selected output format from the combo box
+        string outputFormatEdited; // used to store outputFormat without the period in front of it so it can be parsed and used as a MagickFormat later
+        string input; // used in converting the first character of a string to uppercase
         public frmDarkroom()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace darkroom // :3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // btnConvert_Click event handler takes the current index item and determines what type to convert to
+            // do not need does nothing!!!!!!
         }
 
         private void btnAddFiles_Click(object sender, EventArgs e)
@@ -74,7 +76,7 @@ namespace darkroom // :3
 
                 }
                 string message = "darkroom was unable to open the following files: \n";
-                if (rejectedFiles != null) // prints rejected files in a message box
+                if (rejectedFiles.Any()) // prints rejected files in a message box if there are any
                 {
                     foreach (string file in rejectedFiles)
                     {
@@ -89,23 +91,27 @@ namespace darkroom // :3
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            if (checkedFiles != null)
+            if (checkedFiles.Any()) // makes sure there are files in checkedFiles
             {
-                
+                outputFormat = cmbExtension.Text; // sets outputFormat equal to the selected file extension
+                string input = outputFormat.Substring(1); // trims period
+                outputFormatEdited = FirstCharToUpper(input); // makes first letter uppercase
                 if (!fileExtensions.Contains(outputFormat))  // message box if user types in a format that is UNACCEPTABLE🔥🔥🔥
                 {
                     MessageBox.Show("darkroom does not support the selected output format.", "Invalid output format selected");
                 }
                 else
                 {
-                    outputFormat = cmbExtension.Text; // sets outputFormat equal to the selected file extension
-                    MagickFormat format = ParseMagickFormat(outputFormat); // uses method to parse file extension as a format
-                    foreach (string file in checkedFiles)
+                    MagickFormat format = ParseMagickFormat(outputFormatEdited); // uses method to parse file extension as a format
+                    Convert(format);
+                    ProcessStartInfo psiConvertedFiles = new ProcessStartInfo // process that can open outputFilePath in file explorer
                     {
-                        ConvertImage(file, format);
-                    }
+                        Arguments = "/select, \"" + outputFilePath + "\"",
+                        FileName = "explorer.exe"
+                    };
+                    Process.Start(psiConvertedFiles); // starts process that opens file explorer to the location where the photos were saved
                 }
-                
+
                 /*
                 if (cmbExtension.Text == "JPG")
                 {
@@ -129,28 +135,57 @@ namespace darkroom // :3
                     }
                 }
                 */
-
-                MessageBox.Show("Files converted successfully.");
-               
-                ProcessStartInfo psiConvertedFiles = new ProcessStartInfo // process that can open outputFilePath in file explorer
-                {
-                    Arguments = "/select, \"" + outputFilePath + "\"",
-                    FileName = "explorer.exe"
-                };
-                Process.Start(psiConvertedFiles); // starts process that opens file explorer to the location where the photos were saved
+            }
+            else
+            {
+                MessageBox.Show("No files were selected.", "No files to convert");
             }
         }
-        private void ConvertImage(string file, MagickFormat format)
+
+        private void Convert(MagickFormat format)
+        {
+            foreach (string file in checkedFiles)
+            {
+                try
+                {
+                    ConvertImage(file, format, outputFormat);
+                }
+                catch (ImageMagick.MagickCorruptImageErrorException)
+                {
+                    MessageBox.Show("The image " + file + " could not be converted correctly.", "MagickCorruptImageErrorException");
+                }
+                catch (ImageMagick.MagickDelegateErrorException)
+                {
+                    MessageBox.Show("The image " + file + " could not be converted.", "MagickDelegateErrorException");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+            }
+        }
+
+        private void ConvertImage(string file, MagickFormat format, string outputFormat)
         {
             MagickImage image = new MagickImage(file);
             image.Format = format;
-            outputFilePath = Path.Combine(Path.GetDirectoryName(file), Path.GetFileNameWithoutExtension(file) + ".darkroom" + outputFormat);
-            image.Write(outputFilePath);
+            outputFilePath = Path.Combine(Path.GetDirectoryName(file), Path.GetFileNameWithoutExtension(file) + "darkroom" + outputFormat);
+            image.Write(outputFilePath);           
         }
 
-        private static ImageMagick.MagickFormat ParseMagickFormat(string outputFormat)
+        private static ImageMagick.MagickFormat ParseMagickFormat(string outputFormatTrimmed)
         {
-            return (MagickFormat)Enum.Parse(typeof(MagickFormat), outputFormat, true);
+            return (MagickFormat)Enum.Parse(typeof(MagickFormat), outputFormatTrimmed, true);
+        }
+
+        public string FirstCharToUpper(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return string.Empty;
+            }
+
+            return $"{char.ToUpper(input[0])}{input[1..]}";
         }
 
         /*

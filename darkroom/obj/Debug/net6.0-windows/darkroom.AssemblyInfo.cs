@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("darkroom")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b74a7ed7c83cc72eb6e9c474c604664d5b5dda54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f2c2b820eec9afe02c842b56d1f19afa0ed72dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("darkroom")]
 [assembly: System.Reflection.AssemblyTitleAttribute("darkroom")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
